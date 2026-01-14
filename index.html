@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fa-solid fa-user"></i>
+                Portfolio
+            </div>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="accueil" class="hero">
+        <div class="hero-content">
+            <img src="media/img/aymen.png" alt="Photo de profil" class="profile-img">
+            <h1>Aymen Elouadi</h1>
+            <p class="subtitle">Devloppeur Web & Gestionnaire de Systemes</p>
+            <a href="#contact" class="cta-button">Me Contacter</a>
+        </div>
+    </section>
+
+    <section id="competences">
+        <h2>Mes Compétences</h2>
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+                <h3>Développement Web</h3>
+                <p>HTML, CSS (Sites web responsives)</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+
+                </div>
+                <h3>Responsive Design</h3>
+                <p>Mobile-first, Flexbox, Compatibilité navigateurs</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fa-solid fa-server"></i>
+                </div>
+                <h3>VPS & Linux</h3>
+                <p>Ubuntu, gestion de serveur, hébergement web, sécurité de base</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fa-solid fa-chart-line"></i>
+
+                </div>
+                <h3>Marketing Digital</h3>
+                <p>SEO de base, optimisation de contenu</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="projets">
+        <h2>Mes Projets</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="media/img/project1.png" alt="Projet 1" class="project-image">
+                <div class="project-content">
+                    <h3>Portfolio</h3>
+                    <p>
+                        Un portfolio personnel développé en HTML et CSS
+                    </p>
+                    <p>
+                        Pour présenter mes projets et mes compétences
+                    </p>
+                    <p>
+                        Avec un design simple et professionnel
+                    </p>
+                    <a href="https://github.com/aymenelouadi/porfolio" class="project-link" target="_blank">
+                        <i class="fa-brands fa-github"></i> Voir le Code
+                    </a>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="media/img/project2.png" alt="Projet 2" class="project-image">
+                <div class="project-content">
+                    <h3>Gestion de Serveur</h3>
+                    <p>
+                        Mise en place et gestion d’une plateforme
+                    </p>
+                    <p>
+                        d’hébergement VPS destinée aux utilisateurs
+                    </p>
+                    <p>
+                        avec gestion des ressources et support technique
+                    </p>
+                    <a href="https://panel.codnex.xyz/" class="project-link" target="_blank">
+                        <i class="fa-solid fa-server"></i> Voir le Panel
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-info-section">
+    <h2>Me Contacter</h2>
+    <div class="cards-container">
+        <div class="info-card">
+            
+            <label class="info-label">
+                <i class="fa-solid fa-circle-user"></i>
+                Nom:
+            </label>
+            <p class="info-text">Aymen Elouadi</p>
+        </div>
+        <div class="info-card">
+            <label class="info-label">
+                <i class="fa-solid fa-envelope"></i>
+                Email:
+            </label>
+            <p class="info-text"><a href="mailto:aymen.elouadi@codnex.xyz">aymen.elouadi@codnex.xyz</a></p>
+        </div>
+        <div class="info-card">
+            <label class="info-label">
+                <i class="fa-solid fa-phone"></i>
+                Téléphone:
+            </label>
+            <p class="info-text"><a href="tel:+212675454933">+212 675454933</a></p>
+        </div>
+        <div class="info-card">
+            <label class="info-label">
+                <i class="fa-solid fa-location-dot"></i>
+                Localisation:
+            </label>
+            <p class="info-text">Casablanca, Maroc</p>
+        </div>
+    </div>
+</section>
+
+
+
+    <footer>
+        <p>&copy; 2026 Aymen Elouadi. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        document.querySelector('.contact-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Merci pour votre message ! (Formulaire de démonstration)');
+            this.reset();
+        });
+    </script>
+</body>
+
+</html>
